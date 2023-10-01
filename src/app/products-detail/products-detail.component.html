@@ -1,0 +1,15 @@
+<h2>Product Details </h2>  
+<div *ngFor="let prod of products"> 
+ Id : {{prod.productId}}, Name : {{ prod.productName}}
+</div> 
+
+<h1>Product details</h1>
+<form #register="ngForm" (submit)="saveProds(register.value)">
+  
+  <input name="productName" placeholder="productName" ngModel />
+  <br/>
+  <input name="productPrice" placeholder="productPrice" ngModel />
+  <br/>
+    
+  <button type="submit">Add Product</button>
+</form>

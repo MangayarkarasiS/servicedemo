@@ -1,0 +1,33 @@
+<h2>Employee Details: </h2>  
+<div *ngFor="let stud of students"> 
+ id: {{stud.productId}}
+ <!-- Id : {{stud.id}}, Marks : {{stud.marks}}  
+   Id : {{stud.id}}, Name : {{stud.name}}  -->
+ Id : {{stud.productId}}, Name : {{ stud.productName}}
+<!-- <textarea id="w3review" name="w3review" rows="40" cols="50" {{stud.empimg}}></textarea>
+ <img class="card-img-top" height="50px" width="50px
+ " src='{{stud.empimg}}' alt="card-image">-->
+</div> 
+
+<h1>Student details</h1>
+<form #register="ngForm" (submit)="savestuds(register.value)">
+  
+ <!-- <input name="eId" placeholder="eId" ngModel />
+  <br/>-->
+  <input name="productName" placeholder="productName" ngModel />
+  <br/>
+  <input name="productPrice" placeholder="productPrice" ngModel />
+  <br/>
+  <!--<input name="empimg" placeholder="empimg" ngModel />
+  <br/>-->
+  
+  <button type="submit">Add Student</button>
+</form>
+<h1>Delete Student</h1>
+<form #register1="ngForm" (submit)="DeleteStuds(register1.value)">
+ 
+  
+  <input name="productName" placeholder="Name" ngModel />
+  <br/>
+    <button type="submit">Delete Student</button>
+</form>
